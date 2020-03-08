@@ -1,0 +1,36 @@
+{
+    "name": "mohsenbostan/ghasedak-sms",
+    "description": "Ghasedak SMS service package for laravel.",
+    "license": "MIT",
+    "version": "1.0.0",
+    "homepage": "https://github.com/mohsenbostan/ghasedak-sms",
+    "authors": [
+        {
+            "name": "Mohsen Bostan",
+            "email": "mohsenbostandev@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": " Ghasedak Team",
+            "email": "info@ghasedak.io",
+            "role": "Company"
+        }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "illuminate/support": "^7.0",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MohsenBostan\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MohsenBostan\\GhasedakSmsServiceProvider"
+            ]
+        }
+    }
+}
