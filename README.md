@@ -4,7 +4,8 @@
 </p>
 
 ## Ghasedak SMS Service Package For Laravel.
-This package make sending SMS simple via Ghasedak.io SMS Service.
+This package makes sending SMS simply via Ghasedak.io SMS Service.
+
 
 > Important: This Package Requires Laravel 7 Or Newer!
 
