@@ -38,11 +38,20 @@ $sms = GhasedakSms::sendSingleSMS($message, $receptor, $linenumber);
 return $sms;
 ```
 
-2 - You can send SMS to multiple receptors like example:
+2 - You can send SMS to multiple receptors with multiple line numbers like example:
 ```php
 use MohsenBostan\GhasedakSms;
 
-$sms = GhasedakSms::sendMultipleSMS($message, $receptors, $linenumber);
+$sms = GhasedakSms::sendType1MultipleSMS($message, $receptors, $linenumbers);
+
+return $sms;
+```
+
+3 - You can send SMS to multiple receptors with one line number like example:
+```php
+use MohsenBostan\GhasedakSms;
+
+$sms = GhasedakSms::sendType2MultipleSMS($message, $receptors, $linenumber);
 
 return $sms;
 ```
