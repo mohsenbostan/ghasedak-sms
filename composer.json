@@ -19,7 +19,8 @@
     "prefer-stable": true,
     "require": {
         "illuminate/support": "^7.0",
-        "guzzlehttp/guzzle": "^6.5"
+        "guzzlehttp/guzzle": "^6.5",
+        "nesbot/carbon": "^2.16"
     },
     "autoload": {
         "psr-4": {
