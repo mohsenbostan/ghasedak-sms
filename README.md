@@ -23,13 +23,15 @@ composer require mohsenbostan/ghasedak-sms
 php artisan vendor:publish --tag=config
 ```
 
-3 - Add this to your .env file and replace your API KEY there:
+3 - Add this to your .env file and replace defaults:
 ```dotenv
 GHASEDAK_API_KEY="${GHASEDAK_API_KEY}"
+GHASEDAK_LINE_NUMBER="${GHASEDAK_LINE_NUMBER}"
+GHASEDAK_LINE_NUMBERS="${GHASEDAK_LINE_NUMBERS}"
 ```
 
 ## Usage
-1 - You can send Simple Single SMS like example:
+ - You can send Simple Single SMS like example:
 ```php
 use MohsenBostan\GhasedakSms;
 
@@ -38,7 +40,7 @@ $sms = GhasedakSms::sendSingleSMS($message, $receptor, $linenumber);
 return $sms;
 ```
 
-2 - You can send SMS to multiple receptors with multiple line numbers like example:
+ - You can send SMS to multiple receptors with multiple line numbers like example:
 ```php
 use MohsenBostan\GhasedakSms;
 
@@ -47,11 +49,20 @@ $sms = GhasedakSms::sendType1MultipleSMS($message, $receptors, $linenumbers);
 return $sms;
 ```
 
-3 - You can send SMS to multiple receptors with one line number like example:
+ - You can send SMS to multiple receptors with one line number like example:
 ```php
 use MohsenBostan\GhasedakSms;
 
 $sms = GhasedakSms::sendType2MultipleSMS($message, $receptors, $linenumber);
+
+return $sms;
+```
+
+ - You can send Voice Message like example:
+```php
+use MohsenBostan\GhasedakSms;
+
+$sms = GhasedakSms::sendVoiceMessage($message, $receptors);
 
 return $sms;
 ```

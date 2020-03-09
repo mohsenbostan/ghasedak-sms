@@ -22,7 +22,7 @@ class GhasedakSms
         $data_to_send = [
             "message" => $message,
             "receptor" => $receptor,
-            "linenumber" => $linenumber
+            "linenumber" => config('ghasedak-sms.line_number')
         ];
         if ($senddate) {
             $send_date = Carbon::createFromFormat('Y-m-d H:i:s', $senddate, 'Asia/Tehran');
@@ -54,7 +54,7 @@ class GhasedakSms
         $data_to_send = [
             "message" => $message,
             "receptor" => $receptors,
-            "linenumber" => $linenumbers
+            "linenumber" => config('ghasedak-sms.line_number')
         ];
         if ($senddate) {
             $send_date = Carbon::createFromFormat('Y-m-d H:i:s', $senddate, 'Asia/Tehran');
@@ -86,7 +86,7 @@ class GhasedakSms
         $data_to_send = [
             "message" => $message,
             "receptor" => $receptors,
-            "linenumber" => $linenumber
+            "linenumber" => config('ghasedak-sms.line_number')
         ];
         if ($senddate) {
             $send_date = Carbon::createFromFormat('Y-m-d H:i:s', $senddate, 'Asia/Tehran');
