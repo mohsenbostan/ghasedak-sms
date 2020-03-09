@@ -38,7 +38,7 @@ $sms = GhasedakSms::sendSingleSMS($message, $receptor, $linenumber);
 return $sms;
 ```
 
-2 - You can send Multiple SMS like example:
+2 - You can send SMS to multiple receptors like example:
 ```php
 use MohsenBostan\GhasedakSms;
 
