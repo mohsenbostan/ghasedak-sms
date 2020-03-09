@@ -16,7 +16,7 @@ class GhasedakSms
      * @param string|null $senddate
      * @return array
      */
-    public static function sendSingleSMS(string $message, string $receptor, string $linenumber, ?string $senddate = null)
+    public static function sendSingleSMS(string $message, string $receptor, ?string $senddate = null)
     {
         // Storing Data In A Variable To Make It More Readable!
         $data_to_send = [
@@ -48,13 +48,13 @@ class GhasedakSms
      * @param string|null $senddate
      * @return array
      */
-    public static function sendType1MultipleSMS(string $message, string $receptors, string $linenumbers, ?string $senddate = null)
+    public static function sendType1MultipleSMS(string $message, string $receptors, ?string $senddate = null)
     {
         // Storing Data In A Variable To Make It More Readable!
         $data_to_send = [
             "message" => $message,
             "receptor" => $receptors,
-            "linenumber" => config('ghasedak-sms.line_number')
+            "linenumber" => config('ghasedak-sms.line_numbers')
         ];
         if ($senddate) {
             $send_date = Carbon::createFromFormat('Y-m-d H:i:s', $senddate, 'Asia/Tehran');
@@ -80,7 +80,7 @@ class GhasedakSms
      * @param string|null $senddate
      * @return array
      */
-    public static function sendType2MultipleSMS(string $message, string $receptors, string $linenumber, ?string $senddate = null)
+    public static function sendType2MultipleSMS(string $message, string $receptors, ?string $senddate = null)
     {
         // Storing Data In A Variable To Make It More Readable!
         $data_to_send = [

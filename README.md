@@ -35,7 +35,7 @@ GHASEDAK_LINE_NUMBERS="${GHASEDAK_LINE_NUMBERS}"
 ```php
 use MohsenBostan\GhasedakSms;
 
-$sms = GhasedakSms::sendSingleSMS($message, $receptor, $linenumber);
+$sms = GhasedakSms::sendSingleSMS($message, $receptor);
 
 return $sms;
 ```
@@ -44,7 +44,7 @@ return $sms;
 ```php
 use MohsenBostan\GhasedakSms;
 
-$sms = GhasedakSms::sendType1MultipleSMS($message, $receptors, $linenumbers);
+$sms = GhasedakSms::sendType1MultipleSMS($message, $receptors);
 
 return $sms;
 ```
@@ -53,7 +53,7 @@ return $sms;
 ```php
 use MohsenBostan\GhasedakSms;
 
-$sms = GhasedakSms::sendType2MultipleSMS($message, $receptors, $linenumber);
+$sms = GhasedakSms::sendType2MultipleSMS($message, $receptors);
 
 return $sms;
 ```
@@ -69,7 +69,8 @@ return $sms;
 
 **Usage Warnings :**
 1. All data that you pass, Should be in string!
-2. When you use ***sendMultipleSMS***, you should separate numbers by comma ***" , "***.
+2. Line number(s) should stored in .env . ( Installation Guide 3)
+3. When you use ***sendMultipleSMS***, you should separate numbers by comma ***" , "***.
    For example : " 09120000000,09180000000,09010000000 "
 
 ## Contact Developer
