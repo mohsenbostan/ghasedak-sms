@@ -102,4 +102,32 @@ class GhasedakSms
         // To Know More About All Possible Responses, Please Visit : https://ghasedak.io/docs
         return $send_sms->json();
     }
+
+    /**
+     * Use this method to send Voice Message
+     * @param string $message
+     * @param string $receptors
+     * @param string|null $senddate
+     */
+    public static function sendVoiceMessage(string $message, string $receptor, ?string $senddate = null)
+    {
+        // Storing Data In A Variable To Make It More Readable!
+        $data_to_send = [
+            "message" => $message,
+            "receptor" => $receptor,
+        ];
+        if ($senddate) {
+            $send_date = Carbon::createFromFormat('Y-m-d H:i:s', $senddate, 'Asia/Tehran');
+            $data_to_send["senddate"] = $send_date->timestamp;
+        }
+
+        // Sending Voice Message Using Laravel Http Client
+        $send_sms = Http::withHeaders([
+            "apikey" => config('ghasedak-sms.api_key'),
+        ])->asForm()->post("https://api.ghasedak.io/v2/voice/send/simple", $data_to_send);
+
+        // Return Json Response
+        // To Know More About All Possible Responses, Please Visit : https://ghasedak.io/docs
+        return $send_sms->json();
+    }
 }
