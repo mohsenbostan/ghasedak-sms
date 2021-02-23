@@ -2,7 +2,7 @@
     "name": "mohsenbostan/ghasedak-sms",
     "description": "Ghasedak SMS service package for laravel.",
     "license": "MIT",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "homepage": "https://github.com/mohsenbostan/ghasedak-sms",
     "authors": [
         {
