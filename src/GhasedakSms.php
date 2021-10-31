@@ -32,10 +32,10 @@ class GhasedakSms
         // Sending SMS Using Laravel Http Client
         $send_sms = Http::withHeaders([
             "apikey" => config('ghasedak-sms.api_key'),
-        ])->asForm()->post("https://api.ghasedak.io/v2/sms/send/simple", $data_to_send);
+        ])->asForm()->post("https://api.ghasedak.me/v2/sms/send/simple", $data_to_send);
 
         // Return Json Response
-        // To Know More About All Possible Responses, Please Visit : https://ghasedak.io/docs
+        // To Know More About All Possible Responses, Please Visit : https://ghasedak.me/docs
         return $send_sms->json();
     }
 
@@ -64,10 +64,10 @@ class GhasedakSms
         // Sending SMS Using Laravel Http Client
         $send_sms = Http::withHeaders([
             "apikey" => config('ghasedak-sms.api_key'),
-        ])->asForm()->post("https://api.ghasedak.io/v2/sms/send/pair", $data_to_send);
+        ])->asForm()->post("https://api.ghasedak.me/v2/sms/send/pair", $data_to_send);
 
         // Return Json Response
-        // To Know More About All Possible Responses, Please Visit : https://ghasedak.io/docs
+        // To Know More About All Possible Responses, Please Visit : https://ghasedak.me/docs
         return $send_sms->json();
     }
 
@@ -96,10 +96,10 @@ class GhasedakSms
         // Sending SMS Using Laravel Http Client
         $send_sms = Http::withHeaders([
             "apikey" => config('ghasedak-sms.api_key'),
-        ])->asForm()->post("https://api.ghasedak.io/v2/sms/send/pair", $data_to_send);
+        ])->asForm()->post("https://api.ghasedak.me/v2/sms/send/pair", $data_to_send);
 
         // Return Json Response
-        // To Know More About All Possible Responses, Please Visit : https://ghasedak.io/docs
+        // To Know More About All Possible Responses, Please Visit : https://ghasedak.me/docs
         return $send_sms->json();
     }
 
@@ -124,10 +124,10 @@ class GhasedakSms
         // Sending Voice Message Using Laravel Http Client
         $send_sms = Http::withHeaders([
             "apikey" => config('ghasedak-sms.api_key'),
-        ])->asForm()->post("https://api.ghasedak.io/v2/voice/send/simple", $data_to_send);
+        ])->asForm()->post("https://api.ghasedak.me/v2/voice/send/simple", $data_to_send);
 
         // Return Json Response
-        // To Know More About All Possible Responses, Please Visit : https://ghasedak.io/docs
+        // To Know More About All Possible Responses, Please Visit : https://ghasedak.me/docs
         return $send_sms->json();
     }
 }
